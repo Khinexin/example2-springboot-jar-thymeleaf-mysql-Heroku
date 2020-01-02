@@ -17,6 +17,11 @@ public class StudentController {
 	@Autowired
 	private StudentService studentService;
 	
+	@GetMapping("/")
+	public String helloworld() {
+		return "Hello World!";
+	}
+	
 	@GetMapping("/students")
 	public List<Student> retrieveStudents(){
 		return studentService.studentList();
